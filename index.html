@@ -1,89 +1,59 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<!--Last update: May 31st, 2019-->
-
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Hajira Jabeen</title>
-    <style>
-        body {
-            margin: 20px 50px;
-        }
-        
-        p {
-            margin: 20px 20px;
-            text-align: justify;
-            text-justify: inter-word;
-        }
-        
+<title>Hajira Jabeen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+  
         .header {
             background-color: #f1f1f1;
-            padding: 20px;
             text-align: center;
         }
-        
-        .column {
-            float: left;
+  h2.page-header {
+            background-color:  #f1f1f1;
         }
-        /* Left and right column */
-        
-        .column.side {
-            width: 20%;
-        }
-        /* Middle column */
-        
-        .column.middle {
-            width: 80%;
-        }
-        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        
-        @media screen and (max-width: 600px) {
-            .column.side,
-            .column.middle {
-                width: 100%;
-            }
-        }
-        
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
-        .page-header {
-            border-radius: 6px;
-            padding: 5px 15px;
-            margin: 10px 0px;
-        }
-        
-        h1.page-header {
-            background-color: rgb(75, 125, 190);
-            color: white;
-        }
-        
-        h2.page-header {
-            background-color: rgb(218, 229, 241);
-        }
-        
-        h3.page-header {
-            background-color: rgb(238, 238, 238);
-        }
-        
-        .footer {
-            background-color: #F1F1F1;
-            text-align: center;
-            padding: 10px;
-        }
-        
-        table {
-            width: 98%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        table,
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+ table,
         th,
         td {
-            border: 1px solid black;
+            <!border: 1px solid black;-->
             border-collapse: collapse;
         }
         
@@ -94,7 +64,7 @@
         }
         
         table#t01 tr:nth-child(even) {
-            background-color: rgb(238, 238, 238);
+             <!background-color: rgb(238, 238, 238);-->
         }
         
         table#t01 tr:nth-child(odd) {
@@ -102,89 +72,119 @@
         }
         
         table#t01 th {
-            background-color: rgb(218, 229, 241);
+             background-color: #f1f1f1;
             color: black;
         }
 
- 	table#t02,
-	th, 
-	td {
-  		border: 0;
-		}
-
-    </style>
+</style>
 </head>
-
 <body>
+<div class="header">
 
-    <div class="header">
         <h1>Hajira Jabeen, PhD</h1>
         <h2>~ Research Group Leader at the University of Bonn ~</h2>
-    </div>
+</div>
 
-<h1 class="page-header">Summary</h1>
+<h2 class="page-header">Summary</h2>
 <table id="t02">
 <tbody>
 <tr>
-<td style="width: 902px;">I am working as a Senior Data Scientist & Group Leader at the University of Bonn. I am associated with <a href="http://sda.tech/">Smart Data Analytics </a><strong>since 2016</strong></td>
+<td >
+
+I am working as a Senior Data Scientist & Group Leader at the University of Bonn in <a href="http://sda.tech/">Smart Data Analytics </a><strong>since 2016</strong>. I am leading the group ‘Distributed Semantics Analytics' that deals with distributed analytics, semantic web, data mining, and big data. 
+I am actively involved in teaching, seminars and labs related to big data and analytics. I am also working on several international projects related to big data, analytics, and knowledge exchange.
+</td>
 <td style="width: 96px;"><a href="./H2.png"> <img src="./H2.png" alt="Photo" /> </a></td>
 </tr>
 </tbody>
 </table>
-    <h1 class="page-header">Publications</h1>
-    <ol>
-        <br /><strong>Peer Reviewed Journal Articles</strong>
 
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Publications')">Publications</button>
+  <button class="tablinks" onclick="openCity(event, 'Experience')">Experience</button>
+  <button class="tablinks" onclick="openCity(event, 'Funded Research Projects')">Funded Research Projects</button>
+<button class="tablinks" onclick="openCity(event, 'Supervision')">Supervision</button>
+</div>
+
+<div id="Publications" class="tabcontent">
+<h2 class="page-header">Publications</h2>
+    <ol>
+ <table id="t01">
+<tbody>
+<tr>
+<th>
+        <br /><strong>Peer Reviewed Journal Articles</strong>
+</th>
+</tr>
+<tr>
+<td>
+	<li><a href="./publications/FinantialIntegration.pdf">IOTA: Interlinking of Heterogeneous Multilingual Open Fiscal DaTA" </a>
+            <br />14. Musyafa, F.,  Vidal, M, Orlandi, F, Lehmann, J. and Jabeen, H, <u>H Jabeen</u>, 2019
+            <br />&nbsp;Expert Systems With Applications
+        </li>
         <li><a href="./publications/BioKEEN Application Note .pdf">BioKEEN: A library for learning and evaluating biological knowledge graph embeddings </a>
-            <br />M Ali, CT Hoyt, D Domingo-Fernandez, J Lehmann, H Jabeen, 2019
+            <br />M Ali, CT Hoyt, D Domingo-Fernandez, J Lehmann, <u>H Jabeen</u>, 2019
             <br />&nbsp;Bioinformatics
         </li>
         <li><a href="./publications/opsode.pdf">OPSODE: Opposition based particle swarm optimization instilled with differential evolution</a>
-            <br />Q Abbas, J Ahmad, H Jabeen
+            <br />Q Abbas, J Ahmad, <u>H Jabeen</u>
             <br />&nbsp;International Journal of Advanced and Applied Sciences, 2017</li>
         <li><a href="./publications/tour.pdf">Tournament selection mechanism based random vector selection in differential evolution algorithm</a>
-            <br />Q Abbas, J Ahmad, H Jabeen
+            <br />Q Abbas, J Ahmad, <u>H Jabeen</u>
             <br />International Journal of Advanced and Applied Sciences, 2017</li>
         <li><a href="./publications/abbas2017.pdf">Random Controlled Pool base Differential Evolution Algorithm (RCPDE)</a>
-            <br />Q Abbas, J Ahmad, H Jabeen
+            <br />Q Abbas, J Ahmad, <u>H Jabeen</u>
             <br />Intelligent Automation &amp; Soft Computing, 2017</li>
         <li><a href="./publications/swj_sml_bench.pdf">SML-Bench:A benchmarking framework for structured machine learning</a>
-            <br />P Westphal, L B&uuml;hmann, S Bin, H Jabeen, J Lehmann
+            <br />P Westphal, L B&uuml;hmann, S Bin, <u>H Jabeen</u>, J Lehmann
             <br />Semantic Web, 1-15, 2017</li>
         <li><a href="./publications/FPR.pdf">Fitness Proportionate Random Vector Selection based DE Algorithm (FPRVDE)</a>
-            <br />Q Abbas, J Ahmad, H Jabeen
+            <br />Q Abbas, J Ahmad, <u>H Jabeen</u>
             <br />International Journal of Advanced Computer Science and Applications(IJACSA)&nbsp;, 2016</li>
         <li><a href="./publications/NTS.pdf">A novel tournament selection based differential evolution variant for continuous optimization problems</a>
-            <br />Q Abbas, J Ahmad, H Jabeen
+            <br />Q Abbas, J Ahmad, <u>H Jabeen</u>
             <br />Mathematical Problems in Engineering, 2015</li>
         <li><a href="./publications/NEUCOM.pdf">Two-stage learning for multi-class classification using genetic programming</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />Neurocomputing, 2013</li>
         <li><a href="./publications/ASOC.pdf">Two layered Genetic Programming for mixed-attribute data classification</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />Applied Soft Computing 2012</li>
         <li><a href="./publications/CHB.pdf">DepthLimited crossover in GP for classifier evolution</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />Computers in human behavior, 2011</li>
         <li><a href="./publications/IJICIC.pdf">GPSO: A Framework for Optimization of Genetic Programming Classifier Expressions for Binary Classification using Particle Swarm Optimization</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />International journal of innovative computing, information and control, 2011</li>
         <li><a href="./publications/IJEST1.pdf">A Review of classification using genetic programming</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />International journal of engineering science and technology, 2010
-
             <br />
-            <br /><strong>Conference Proceedings</strong>
+       <li><a href="./publications/IJEST1.pdf">DepthLimited Crossover in Genetic Programming for Classifier Evolution</a>
+            <br /><u>H Jabeen</u>, AR Baig
+            <br />Computers in Human Behaviour, 2010
+            <br />
 
-	<li><a href="./publications/.pdf">Cross Administration Comparative Analysis of Open Fiscal Data</a>
+</td>
+</tr>
+<tr>
+<th>
+            <br /><strong>Conference Proceedings</strong>
+</th>
+</tr>
+<tr>
+<td>
+
+	<li><a href="./publications/ICEGOV2020_CR.pdf">Cross Administration Comparative Analysis of Open Fiscal Data</a>
 	    <br /> F Musyafa, J Lehmann and Hajira Jabeen
             <br /> International Conference on Theory and Practice of Electronic Governance, 2020</li>
-	<li><a href="./publications/.pdf"> DISE: A Distributed in-Memory SPARQL Processing Engine over 		Tensor Data</a>
-	    <br /> H Jabeen, E Hazeiv, G Sejdiu and J Lehmann
+	<li><a href="./publications/DISE-CR.pdf"> DISE: A Distributed in-Memory SPARQL Processing Engine over 		Tensor Data</a>
+	    <br /> <u>H Jabeen</u>, E Hazeiv, G Sejdiu and J Lehmann
             <br /> IEEE International Conference on Semantic Computing, 2020</li>
 
         <li><a href="./publications/Squerall_ISWC.pdf">Uniform Access to Multiform Data Lakes using Semantic 		Technologies</a>
-            <br />MN Mami, D Graux, S Scerri, S Auer, H Jabeen and J Lehmann
+            <br />MN Mami, D Graux, S Scerri, S Auer, <u>H Jabeen</u> and J Lehmann
             <br /> iiWAS, 2019</li>
 
 
@@ -194,91 +194,98 @@
 	 <br />International Conference on Semantic Systems, 2019 </li>
 
 	<li> <a href="./publications/OECM_SEMANTICS2019.pdf">From Monolingual to Multilingual Ontologies: The Role of Cross-Lingual Ontology Enrichment</a>
-	<br />S Ibrahim, S Fathalla, HS Yazdi, J Lehmann, H Jabeen
+	<br />S Ibrahim, S Fathalla, HS Yazdi, J Lehmann, <u>H Jabeen</u>
 	<br />International Conference on Semantic Systems, 2019 </li>
 	
 	<li> <a href="./publications/SGA.pdf">Scalable Distributed Genetic Algorithm Using Apache Spark (S-GA)</a>
-	<br />F Maqbool, S Razzaq, J Lehmann, H Jabeen
+	<br />F Maqbool, S Razzaq, J Lehmann, <u>H Jabeen</u>
 	<br />International Conference on Intelligent Computing, 2019 </li>
 
 
         <li><a href="./publications/Squerall_ISWC.pdf">Squerall: Virtual Ontology-Based Access to Heterogeneous and Large Data Sources</a>
-            <br />MN Mami, D Graux, S Scerri, S Auer, H Jabeen and J Lehmann
+            <br />MN Mami, D Graux, S Scerri, S Auer, <u>H Jabeen</u> and J Lehmann
             <br /> International Semantic Web Conference, 2019</li>
         <li><a href="./publications/iswc_dist_quality.pdf">A Scalable Framework for Quality Assessment of RDF Datasets</a>
-            <br /> G Sejdiu, A Rula, J Lehmann and H Jabeen
+            <br /> G Sejdiu, A Rula, J Lehmann and <u>H Jabeen</u>
             <br />International Semantic Web Conference, 2019</li>
         <li><a href="./publications/Pykeen.pdf">The KEEN Universe: An Ecosystem for Knowledge Graph Embeddings with a Focus on Reproducibility and Transferability</a>
-            <br />M Ali, H Jabeen,CT Hoyt,and J Lehmann
+            <br />M Ali, <u>H Jabeen</u>,CT Hoyt,and J Lehmann
             <br /> International Semantic Web Conference, 2019</li>
         <li><a href="./publications/evochef.pdf">EvoChef: Show Me What to Cook! Artificial Evolution of Culinary Arts</a>
-            <br />H Jabeen, N Tahara, J Lehmann
+            <br /><u>H Jabeen</u>, N Tahara, J Lehmann
             <br />International Conference on Computational Intelligence in Music, Sound, Art, 2019</li>
         <li><a href="./publications/CONOD_.pdf">Divided we stand out! forging cohorts for numeric outlier detection in large scale knowledge graphs (conod)</a>
-            <br />H Jabeen, R Dadwal, G Sejdiu, J Lehmann
+            <br /><u>H Jabeen</u>, R Dadwal, G Sejdiu, J Lehmann
             <br />European Knowledge Acquisition Workshop, 2019</li>
         <li><a href="./publications/ICWE2018.pdf">OpenBudgets. eu: A Platform for Semantically Representing and Analyzing Open Fiscal Data</a>
-            <br />FA Musyaffa, L Halilaj, Y Li, F Orlandi, H Jabeen, S Auer, ME Vidal
+            <br />FA Musyaffa, L Halilaj, Y Li, F Orlandi, <u>H Jabeen</u>, S Auer, ME Vidal
             <br />International Conference on Web Engineering, 433-447</li>
         <li><a href="./publications/Classifying.pdf">Classifying data heterogeneity within budget and spending open data</a>
-            <br />FA Musyaffa, F Orlandi, H Jabeen, ME Vidal
+            <br />FA Musyaffa, F Orlandi, <u>H Jabeen</u>, ME Vidal
             <br />Proceedings of the 11th International Conference on Theory and Practice of</li>
         <li><a href="./publications/Lifecycle.pdf">Managing lifecycle of big data applications</a>
-            <br />I Ermilov, ACN Ngomo, A Versteden, H Jabeen, G Sejdiu, G Argyriou, ...
+            <br />I Ermilov, ACN Ngomo, A Versteden, <u>H Jabeen</u>, G Sejdiu, G Argyriou, ...
             <br />International Conference on Knowledge Engineering and the Semantic Web, 263-276</li>
         <li><a href="./publications/SANSA.pdf">Distributed semantic analytics using the sansa stack</a>
-            <br />J Lehmann, G Sejdiu, L B&uuml;hmann, P Westphal, C Stadler, I Ermilov, S Bin, ...H Jabeen
+            <br />J Lehmann, G Sejdiu, L B&uuml;hmann, P Westphal, C Stadler, I Ermilov, S Bin, ...<u>H Jabeen</u>
             <br />International Semantic Web Conference, 2017</li>
         <li><a href="./publications/BDE.pdf">The BigDataEurope platform;supporting the variety dimension of big data</a>
             <br />S Auer, S Scerri, A Versteden, E Pauwels, A Charalambidis, ...
             <br />International Conference on Web Engineering, 2017</li>
         
         <li><a href="./publications/edbt_bde.pdf">Big Data Europe</a>
-            <br />H Jabeen, P Archer, S Scerri, A Versteden, I Ermilov, G Mouchakis, ...
+            <br /><u>H Jabeen</u>, P Archer, S Scerri, A Versteden, I Ermilov, G Mouchakis, ...
             <br />EDBT/ICDT Workshops</li>
         <li><a href="./publications/BD-students.pdf">Big data analytics for behavior monitoring of students</a>
-            <br />AR Baig, H Jabeen
+            <br />AR Baig, <u>H Jabeen</u>
             <br />Procedia Computer Science 82, 43-48</li>
         <li><a href="./publications/ICKM1.pdf">Multiclass Classification using Genetic Programming</a>
             <br />International Conference on Knowledge Management (ICKM 2012)
-            <br />H Jabeen, AR Baig, J Ahmed</li>
+            <br /><u>H Jabeen</u>, AR Baig, J Ahmed</li>
         <li><a href="./publications/ICIC 12.pdf">Lazy learning for multi-class classification using genetic programming</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />International Conference on Intelligent Computing, 177-182</li>
         <li><a href="./publications/KES.pdf">CLONAL-GP framework for artificial immune system inspired genetic programming for classification</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />International Conference on Knowledge-Based and Intelligent Information and</li>
         <li><a href="./publications/HAIS.pdf">A framework for optimization of genetic programming evolved classifier expressions using particle swarm optimization</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />International Conference on Hybrid Artificial Intelligence Systems, 56-63</li>
         <li><a href="./publications/OPSOM.pdf">Opposition based PSO and mutation operators</a>
-            <br />M Imran, H Jabeen, M Ahmad, Q Abbas, W Bangyal
+            <br />M Imran, <u>H Jabeen</u>, M Ahmad, Q Abbas, W Bangyal
             <br />2010 2nd International Conference on Education Technology and Computer 4, V4 &hellip; 12</li>
         <li><a href="./publications/water marking.pdf">Word length based zero-watermarking algorithm for tamper detection in text documents</a>
-            <br />Z Jalil, AM Mirza, H Jabeen
+            <br />Z Jalil, AM Mirza, <u>H Jabeen</u>
             <br />2nd International Conference on Computer Engineering and Technology 2010</li>
         <li><a href="./publications/NICSO.pdf">Particle Swarm Optimization Based Tuning of Genetic Programming Evolved Classifier Expressions</a>
-            <br />H Jabeen, AR Baig
+            <br /><u>H Jabeen</u>, AR Baig
             <br />Nature Inspired Cooperative Strategies for Optimization (NICSO 2010) 284, 399</li>
         <li><a href="./publications/IADIS.pdf">Sponsor-based-architecture for resource management in multi-agent systems</a>
-            <br />Z Jalil, H JabeenThe BigDataEurope platform;supporting the variety dimension of big data
+            <br />Z Jalil, <u>H Jabeen</u>The BigDataEurope platform;supporting the variety dimension of big data
             <br />IADIS Multi Conference on Computer Science and Information Systems(2007)</li>
         <li><a href="./publications/Gecco.pdf">Opposition based initialization in particle swarm optimization (O-PSO)</a>
-            <br />H Jabeen, Z Jalil, AR Baig
+            <br /><u>H Jabeen</u>, Z Jalil, AR Baig
             <br /><em>Genetic and Evolutionary Computation Conference (GECCO 2009).</em>
             <br />
             <br />
 
-
+</td>
+</tr>
+<tr>
+<th>
 <strong>Posters and Demos</strong></li>
+</th>
+</tr>
+<tr>
+<td>
 
      	<li><a href="./publications/EvoChef _ Poster.pdf">EvoChef: Show me What to Cook!
 	Artificial Evolution of Culinary Arts</a>
-            <br />H Jabeen,N Tahara and J Lehmann
+            <br /><u>H Jabeen</u>,N Tahara and J Lehmann
             <br />International Conference on Computational Intelligence in Music, Sound, Art and Design </li>
        
-	<li><a href="./publications/EvoChef _ Poster.pdf">Smart Chef - Evolving Recipes</a>
-            <br />H Jabeen, C Drachner and J Lehmann 
+	<li><a href="./publications/Smart_Chef_Poster.pdf">Smart Chef - Evolving Recipes</a>
+            <br /><u>H Jabeen</u>, C Drachner and J Lehmann 
             <br />International Conference on Computational Intelligence in Music, Sound, Art and Design </li>
 	
 	<li><a href="./publications/Squerall_Demo.pdf">Querying Data Lakes using Spark and Presto</a>
@@ -286,11 +293,11 @@
 	<br />WWW 2019 </li>
 	<li>
 	<a href="./publications/BDA_2019_LAMBDA_Poster.pdf">LAMBDA: Learning, Applying, Multiplying Big Data 		Analytics</a>
-	<br />V Janev, J Lehmann, E Sallinger, S Vahdati, D Graux, and H Jabeen
+	<br />V Janev, J Lehmann, E Sallinger, S Vahdati, D Graux, and <u>H Jabeen</u>
 	<br />European Semantic Web Symposium (ESWS 2019) </li>
 
         <li><a href="./publications/PipingClustering_ESWC_2019_Poster.pdf">Clustering Pipelines of large RDF POI Data</a>
-            <br />R Dadwal, D Graux, G Sejdiu, H Jabeen, J Lehmann
+            <br />R Dadwal, D Graux, G Sejdiu, <u>H Jabeen</u>, J Lehmann
             <br />European Semantic Web Symposium (ESWS 2019)</li>
 
         <li><a href="./publications/OECM-ESWC2019Poster.pdf">OECM: A Cross-lingual Approach for Ontology Enrichment</a>
@@ -298,116 +305,63 @@
             <br />European Semantic Web Symposium (ESWS 2019)</li>
 
         <li><a href="./publications/SANSA_Alethio_Semantics_2018_Poster.pdf">Profiting from Kitties on Ethereum: Leveraging Blockchain RDF Data with SANSA</a>
-            <br />D Graux, G Sejdiu, H Jabeen, J Lehmann, D Sui, D Muhs, J Pfeffer
+            <br />D Graux, G Sejdiu, <u>H Jabeen</u>, J Lehmann, D Sui, D Muhs, J Pfeffer
             <br />Semantics, 2018</li>
 
 	<li><a href="./publications/CSCUBS.pdf">Efficient Data Parsing and Vandalism Detection
 on (Big) Knowledge Bases using Apache Spark</a>
-            <br />N Roqaya, H Jabeen, J Lehmann
+            <br />N Roqaya, <u>H Jabeen</u>, J Lehmann
             <br />Computer Science Conference for University of Bonn Students, 2018 </li>
 
 	<li><a href="./publications/iswc_pd_sansa.pdf">The Tale of Sansa Spark</a>
             <br />I Ermilov, J Lehmann, G Sejdiu, L B&uuml;hmann, P Westphal, C Stadler, S Bin, ...
             <br />International Semantic Web Conference, 2017</li>
     
-   	<li><a href="./publications/BDEPosterKAUST2.pdf">BIG DATA Platform For Empowering
-Communities including Life Sciences</a>
-            <br />H Jabeen, J Lehmann
+   	<li><a href="./publications/BDEPosterKAUST2.pdf">Big Data Platform for empowering
+communities including life sciences</a>
+            <br /><u>H Jabeen</u>, J Lehmann
             <br />Conference for Computational Bioscience Research Center, 2015</li>
 
 	<li><a href="./publications/ISWC-2019-Demo.pdf">How to feed the Squerall with RDF and other data nuts?</a>
 	<br />Mohamed Nadjib Mami, Damien Graux, Simon Scerri, Hajira Jabeen, Sören Auer, Jens Lehmann
 	<br />ISWC (Posters and Demos), 2019 </li>
 
+	<li><a href="./publications/Smart-Chef.pdf">Smart Chef - Evolving Recipes</a>
+            <br /><u>H Jabeen</u>, C Drachner and J Lehmann 
+            <br />International Conference on Computational Intelligence in Music, Sound, Art and Design </li>
+
 	<li>Interroger des Lacs de Données en utilisant Spark & Presto []
 		<br />Mohamed Nadjib Mami, Damien Graux, Simon Scerri, Hajira Jabeen, Sören Auer
 		<br />BDA (Demo Track), 2019 </li>
 
-
+</td>
+</tr>
+<tr>
+<th>
 
             <br /><strong>Non Reviewed Reports</strong></li>
+</th>
+</tr>
+<tr>
+<td>
         <li>&lsquo;Teach me to fish&rsquo;Querying Semantic Data Lakes
-            <br />MN Mami, H Jabeen, S Auer</li>
+            <br />MN Mami, <u>H Jabeen</u>, S Auer</li>
         <li>Squerall: Virtual Ontology-Based Access to Heterogeneous and Large Data Sources
-            <br />MN Mami, D Graux, S Scerri, H Jabeen, S Auer</li>
+            <br />MN Mami, D Graux, S Scerri, <u>H Jabeen</u>, S Auer</li>
         <li>Querying Data Lakes using Spark and Presto
-            <br />MN Mami, D Graux, S Scerri, H Jabeen, S Auer</li>
+            <br />MN Mami, D Graux, S Scerri, <u>H Jabeen</u>, S Auer</li>
     </ol>
-
-
-<h1 class="page-header">Funded Research Projects</h1>
-<table id="t01" >
-<tbody>
-<tr style="height: 12px;">
-<th style="width: 100px; height: 12px;">Project [<em>Role</em>]</th>
-<th style="width: 769.383px; height: 12px;">Abstract</th>
-<th style="width: 37px; height: 12px;">Date</th>
-</tr>
-<tr style="height: 12.4667px;">
-<td style="width: 100px; height: 12.4667px;">Big Data Europe<br />[Technical Leader]</td>
-<td style="width: 769.383px; height: 12.4667px;">&nbsp;</td>
-<td style="width: 37px; height: 12.4667px;">2015-2018</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">Big Data Ocean <br />[Technical Leader]</td>
-<td style="width: 769.383px; height: 12px;">&nbsp;</td>
-<td style="width: 37px; height: 12px;">2016-2019</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">Open Budgets<br />[ML expert]</td>
-<td style="width: 769.383px; height: 12px;">&nbsp;</td>
-<td style="width: 37px; height: 12px;">&nbsp;</td>
-</tr>
-<tr style="height: 36px;">
-<td style="width: 100px; height: 36px;"><a href="https://project-lambda.org/">LAMBDA</a><br />[Academic expert]</td>
-<td style="width: 769.383px; height: 36px;"><strong>LAMBDA</strong> defines a scientific strategy for stepping up and stimulating scientific excellence and innovation capacity, increasing research capacities and unlocking the research potential of the biggest and the oldest R&amp;D Institute in the ICT area in the whole West Balkan region, turning the Institute Mihajlo Pupin into a regional point of reference when it comes to multidisciplinary ICT competence related to Big Data analytics.</td>
-<td style="width: 37px; height: 36px;">2018-2020</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">Gradana<br />[Academic Expert]</td>
-<td style="width: 769.383px; height: 12px;">&nbsp;</td>
-<td style="width: 37px; height: 12px;">2017-2019</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">Better<br />[ML Consultant]</td>
-<td style="width: 769.383px; height: 12px;">BETTER is implementing a Big Data intermediate service layer focused on creating user-centric services and tools, while addressing the full data lifecycle associated with EO data, to bring more downstream users to the EO market and maximise exploitation of Copernicus data and information services.</td>
-<td style="width: 37px; height: 12px;">&nbsp;</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">SLIPO<br />[ML Consultant]</td>
-<td style="width: 769.383px; height: 12px;">SLIPO develops software, models and processes for: transforming conventional POI formats and schemas into RDF data; interlinking POI entities from different datasets; enriching POI entities with additional metadata, including temporal, thematic and semantic properties; fusing Linked POI data in order to produce more complete and accurate POI profiles; assessing the quality of the integrated POI data; offering value added services based on spatial aggregation, association extraction and spatiotemporal prediction.</td>
-<td style="width: 37px; height: 12px;">&nbsp;</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">Cleopatra<br />[Academic Expert]</td>
-<td style="width: 769.383px; height: 12px;">&nbsp;</td>
-<td style="width: 37px; height: 12px;">2019-2022</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">Bio2Vec<br />[Co PI]</td>
-<td style="width: 769.383px; height: 12px;">&nbsp;</td>
-<td style="width: 37px; height: 12px;">2017-2020</td>
-</tr>
-<tr style="height: 12px;">
-<td style="width: 100px; height: 12px;">PLATOON<br />[Co PI]</td>
-<td style="width: 769.383px; height: 12px;">&nbsp;</td>
-<td style="width: 37px; height: 12px;">2020-2022</td>
+</td>
 </tr>
 </tbody>
-</table>
-<p>&nbsp;</p>
+ </table >
 
 
-    <h1 class="page-header">Software Projects</h1>
-    <ul>
-        <li>
-            <a href="http://sansa-stack.net/">SANSA</a>: a big data processing engine for scalable processing of large-scale RDF data
-        </li>
-        <li>
-            <a href="https://eis-bonn.github.io/Squerall/">Squerall</a>: a Semantic DataLake query engine
-        </li>
-    </ul>
-     <h1 class="page-header">Experience</h1>
+  
+</div>
+
+<div id="Experience" class="tabcontent">
+   <h2 class="page-header">Experience</h2>
  
   <table id="t01">
 <tbody>
@@ -416,7 +370,7 @@ Communities including Life Sciences</a>
 <th style="text-align: left;">University of Bonn</th>
 </tr>
 <tr>
-<td colspan="2"><strong>Key research areas</strong><br /> Data Science, Parallel and Distributed Analytics, Knowledge Graphs, Data Mining, Machine Learning, Graph Embeddings, Artificial Intelligence, Semantic Web and related areas<br /> <strong> Projects and Management</strong><br /> Technical WP Lead in H2020 <a href="http://www.bigdataocean.eu/">Big Data Ocean</a>,<br /> Co-PI and Team member of HSP project Smoothed analysis of Machine Learning Algorithms<br /> Lecturing and tutoring in <a href="http://gradana.csd.auth.gr/">Gradana</a>, <a href="https://project-lambda.org/">Lambda</a>, <a href="http://cleopatra-project.eu/">Cleopetra</a><br />HSP for Distributed Big Data Analytics <br /> Worked as a technical lead at Horizon 2020 funded project <a href="https://project-lambda.org/">Big Data Europe</a>, on the creation of &ldquo;<a href="https://github.com/big-data-europe/app-integrator-ui">Big Data Integrator Platform</a>&rdquo;.<br /> <strong>Machine Learning</strong><br /> Provision of technical expertise in projects and use cases for <a href="http://www.bigdataocean.eu/">Big Data Ocean</a>, <a href="https://www.ec-better.eu/">Better</a>, <a href="http://www.slipo.eu/">SLIPO</a>, <a href="https://www.specialprivacy.eu/">SPECIAL</a>, <a href="https://openbudgets.eu/">OpenBudget</a>, <a href="http://bio2vec.net/">Bio2Vec</a> and Blockchain analytics support for <a href="https://aleth.io/">Alethio</a>. <br /> <strong>Supervision of PhD theses</strong><br /> 1. Scalable Distributed Terminological Decision Trees for RDF, Heba Allah, University of Bonn. <br /> 2. Distributed Knowledge Fusion in Knowledge Graphs, Shemaa Khalid<br /> 3. Multilingual and Heterogenous Fiscal Data Integration, Fathoni Musyafa<br />4. Scalable processing over large knowledge Graphs, Gezim Sejdiu<br /> <strong>Teaching</strong><br /> 1. Distributed Big Data Analysis<br /> 2. Knowledge Graph Analysis</td>
+<td colspan="2"><strong>Key research areas</strong><br /> Data Science, Parallel and Distributed Analytics, Knowledge Graphs, Data Mining, Machine Learning, Graph Embeddings, Artificial Intelligence, Semantic Web and related areas<br /> <strong> Projects and Management</strong><br /> Technical WP Lead in H2020 <a href="http://www.bigdataocean.eu/">Big Data Ocean</a>,<br /> Co-PI and Team member of HSP project Smoothed analysis of Machine Learning Algorithms<br /> Lecturing and tutoring in <a href="http://gradana.csd.auth.gr/">Gradana</a>, <a href="https://project-lambda.org/">Lambda</a>, <a href="http://cleopatra-project.eu/">Cleopetra</a><br />HSP for Distributed Big Data Analytics <br /> Worked as a technical lead at Horizon 2020 funded project <a href="https://www.big-data-europe.eu/">Big Data Europe</a>, on the creation of &ldquo;<a href="https://github.com/big-data-europe/app-integrator-ui">Big Data Integrator Platform</a>&rdquo;.<br /> <strong>Machine Learning</strong><br /> Provision of technical expertise in projects and use cases for <a href="http://www.bigdataocean.eu/">Big Data Ocean</a>, <a href="https://www.ec-better.eu/">Better</a>, <a href="http://www.slipo.eu/">SLIPO</a>, <a href="https://www.specialprivacy.eu/">SPECIAL</a>, <a href="https://openbudgets.eu/">OpenBudget</a>, <a href="http://bio2vec.net/">Bio2Vec</a> and Blockchain analytics support for <a href="https://aleth.io/">Alethio</a>. <br /> <strong>Supervision of PhD theses</strong><br /> 1. Scalable Distributed Terminological Decision Trees for RDF, Heba Allah, University of Bonn. <br /> 2. Distributed Knowledge Fusion in Knowledge Graphs, Shemaa Khalid<br /> 3. Multilingual and Heterogenous Fiscal Data Integration, Fathoni Musyafa<br />4. Scalable processing over large knowledge Graphs, Gezim Sejdiu<br /> <strong>Teaching</strong><br /> 1. Distributed Big Data Analysis<br /> 2. Knowledge Graph Analysis</td>
 </tr>
 <tr>
 <th style="text-align: left;">2015-2016, PostDoctoral Researcher</th>
@@ -455,10 +409,158 @@ Communities including Life Sciences</a>
 </tr>
 </tbody>
 </table>
+
+</div>
+
+<div id="Funded Research Projects" class="tabcontent">
+<h2 class="page-header">Funded Research Projects</h2>
+<table id="t01" >
+<tbody>
+<tr >
+<th style="width: 150px; height: 12px;">Project [<em>Role</em>]</th>
+<th >Abstract</th>
+<th >Date</th>
+
+</tr>
+<tr >
+<td ><a href="https://www.big-data-europe.eu/">Big Data Europe</a><br />[Technical Leader]</td>
+<td ">Technical lead for creation of “Big Data Integrator Platform”.</td>
+<td >2015-2018</td>
+</tr>
+<tr >
+<td s><a href="http://www.bigdataocean.eu/">Big Data Ocean</a> <br />[Technical Leader]</td>
+<td >Technical Lead for the data harmonization and platform for maritime data</td>
+<td >2016-2019</td>
+</tr>
+<tr >
+<td ><a href="https://openbudgets.eu/">OpenBudget</a><br />[ML expert]</td>
+<td >Technical advisor for platform development and multimodal data analytics</td>
+<td >&nbsp;</td>
+</tr>
+<tr >
+<td ><a href="https://project-lambda.org/">LAMBDA</a><br />[Academic expert]</td>
+<td >Knowldge exchange expert and educationist</td>
+<td >2018-2020</td>
+</tr>
+<tr >
+<td ><a href="http://gradana.csd.auth.gr/">Gradana</a><br />[Academic Expert]</td>
+<td >Knowldge exchange expert and educationist</td>
+<td >2017-2019</td>
+</tr>
+<tr >
+<td ><a href="https://www.ec-better.eu/">Better</a><br />[ML Consultant]</td>
+<td >Machine Learning and Analytics consultant</td>
+<td >&nbsp;</td>
+</tr>
+<tr >
+<td ><a href="http://www.slipo.eu/">SLIPO</a><br />[ML Consultant]</td>
+<td >Machine Learning and Analytics consultant</td>
+<td >&nbsp;</td>
+</tr>
+<tr >
+<td ><a href="http://cleopatra-project.eu/">Cleopetra</a><br />[Academic Expert]</td>
+<td >Knowldge exchange expert and educationist</td>
+<td >2019-2022</td>
+</tr>
+<tr >
+<td ><a href="http://bio2vec.net/">Bio2Vec</a><br />[Co PI]</td>
+<td >Technical lead</td>
+<td >2017-2020</td>
+</tr>
+<tr >
+<td >PLATOON<br />[Co PI]</td>
+<td >Technical lead</td>
+<td >2020-2022</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="Supervision" class="tabcontent">
+<h2 class="page-header">Theses Supervision</h2>
+    
+ <table id="t01">
+<tbody>
+<tr>
+<th>
+        <br /><strong>PhD</strong>
+</th>
+</tr>
+<tr>
+<td>
+<ol>
+	
+<li> Scalable Distributed Terminological Decision Trees for RDF, Heba Allah, University of Bonn, Germany </li>
+<li> Distributed Knowledge Fusion in Knowledge Graphs, Shemaa Khalid, University of Bonn, Germany </li>
+<li> Scalable Multilingual and Heterogenous Fiscal Data Integration, Fathoni Musyafa, University of Bonn, Germany </li>
+<li> Distributed RDF processing using Apache Spark, Gezim Sejdiu, University of Bonn, Germany </li>
+<li> Performance Analysis of Evolutionary Computation Techniques for Continuous Optimization Problems, Qamar Abbas, Iqra University, Islamabad. 2016 </li>
+    </ol>
+</td>
+</tr>
+<tr>
+<th>
+        <br /><strong>Master Theses</strong>
+</th>
+</tr>
+<tr>
+<td>
+<ol>
+
+<li>Smart Chef - Evolving Recipes, Carsten Felix Draschner, 2019</li>
+<li>Automated Link Discovery for Data Harmonization in the Maritime Domain, Jaime Manuel Trillos, 2019</li>
+<li>Scalable Entity Resolution, Amrit Kaur, 2019</li>
+<li>Distributed in-memory SPARQL Processing Haziiev Eskender, 2019</li>
+<li>Scalable RDF Clustering, Pratik Kumar Agarwal, 2019</li>
+
+<li>Rule Mining on Distributed RDF Data, Kunal Jha, 2018</li>
+<li>EvoChef! Teach me how to cook..Machine Generated Recipes Using Evolutionary Algorithm, Nargis Tahara, 2018</li>
+<li>Distributed RDF Clustering Framework, Tina Boroukhian, 2018</li>
+<li>Distributed Data Parsing and Vandalism Detection on Large-scale Knowledge Graphs Using Apache Spark and Hadoop Ecosystem, Nayef Fayez Roqaya, 2018</li>
+<li>Scalable Numerical Outlier Detection in Knowledge Graphs, Rajjat Dadwal, 2018</li>
+
+<li>Association Rule Mining of Linked Data Using Apache Spark, Theresa Nathan, 2017</li>
+<li>Reserving Algorithms and Portfolio Analysis for Life Insurance using Apache Spark, Amir Ansari, 2017 (SCOR, Cologne)</li>
+
+<li>Extraction and Fusion of Identity Data, YUJIE DIAO, 2016 (SMS group GmbH)</li>
+
+<li>Developing a believable MCTSagent in a real-time platform shooter, Lasse Knudsen, Lasse Joergensen 2015</li>
+
+<li>Comprehensive Rule Discovery Using Differential Evaluation For Breast Cancer Survival, Zubair Farooq, 2014</li>
+
+<li>Comprehensive Rules Discovery Using Particle Swarm Optimization For Back Pain Diagnosis, Hasan Kamal, 2013</li>
+<li>Fuzzy Logic Based Intelligent Software Requirement Elicitation Technique Selection Model, Wajid Arshad Abbasi, 2013</li>
+<li>A modified decreasing inertia weight in Particle Swarm Optimization (PSO), Muhammad Husnain, 2013</li>
+
+
+<li>Modified Particle Swarm Optimization (PSO) with Laplace Mutation Operator (LMPSO), Muhammad Imran, 2010</li>
+
+
+</ol>
+
+</td>
+</tr>
+
+
+</tbody>
+ </table >
+
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
 </body>
-
-<!--Style inspired by <https://chrdebru.github.io/>-->
-<!--Style inspired by <https://dgraux.github.io/>-->
-
-</html>
+</html> 
 
